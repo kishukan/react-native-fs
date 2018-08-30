@@ -322,9 +322,9 @@ RCT_EXPORT_METHOD(read:(NSString *)filepath
         content = [file readDataToEndOfFile];
     }
 
-    NSString *base64Content = [content base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
+    // NSString *base64Content = [content base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
 
-    resolve(base64Content);
+    resolve(content);
 }
 
 RCT_EXPORT_METHOD(hash:(NSString *)filepath
