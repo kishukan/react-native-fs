@@ -277,9 +277,9 @@ RCT_EXPORT_METHOD(readFile:(NSString *)filepath
   }
 
   NSData *content = [[NSFileManager defaultManager] contentsAtPath:filepath];
-  NSString *base64Content = [content base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
+  // NSString *base64Content = [content base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
 
-  resolve(base64Content);
+  resolve(content);
 }
 
 RCT_EXPORT_METHOD(read:(NSString *)filepath
